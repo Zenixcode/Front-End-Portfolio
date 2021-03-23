@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+//sides are contained
+body{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    
+}
+
+.logo{
+    color: rgb(27, 26, 26);
+    letter-spacing: 4px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.nav-ul{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    font-size: 1rem;
+    text-decoration: none;
+    list-style: none;
+}
+  .nav-ul a{
+      text-decoration: none;
+      color:#000000;
+      letter-spacing: 2px;
+      font-size: 1rem;
+      padding: 5px;
+  }
+
+.burger div{
+    width: 1.7em;
+    height: 2px;
+    margin: 5px;
+    background-color: black;
+}
+  .burger{
+      display: none;
+  }
+
+@media(max-width: 900px){
+    .burger{
+        display:block;
+        cursor: pointer;
+    }
+    .nav-ul{
+        position: absolute;
+        right: 5vw;
+        height: 92vh;
+        top: 8vh;
+        background: rgb(0, 214, 221);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(110%);
+        transition: transform 1s ease;
+    }
+
+    .nav-ul li{
+        opacity: 1;
+    }
+
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    
+}

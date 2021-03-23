@@ -1,0 +1,102 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 8vh;
+}
+
+.logo {
+  color: #1b1a1a;
+  letter-spacing: 4px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-ul a {
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.burger div {
+  width: 1.7em;
+  height: 2px;
+  margin: 5px;
+  background-color: black;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-ul {
+    position: absolute;
+    right: 5vw;
+    height: 92vh;
+    top: 8vh;
+    background: #00d6dd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  .nav-ul li {
+    opacity: 1;
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
