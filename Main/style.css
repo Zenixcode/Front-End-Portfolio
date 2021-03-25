@@ -63,7 +63,7 @@ nav {
   display: none;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 414px) {
   .burger {
     display: block;
     cursor: pointer;
@@ -91,8 +91,7 @@ nav {
     transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
     transition: transform 1s ease, -webkit-transform 1s ease;
-    -webkit-box-shadow: -1px 0px 10px #0000008e;
-            box-shadow: -1px 0px 10px #0000008e;
+    z-index: 3;
   }
   .nav-ul a:hover {
     color: white;
@@ -129,6 +128,7 @@ nav {
     height: 90vh;
     margin-top: 10vh;
     grid-row-gap: 5vh;
+    position: relative;
   }
   .grid-item {
     height: 100%;
@@ -139,14 +139,49 @@ nav {
             box-shadow: -1px 1px 1px #0000008f;
   }
   .project1 {
-    background: url(/Assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background: url(/Assets/die-griechen-EEjXxQ5IkA0-unsplash.jpg);
     height: 45vh;
+    width: 90vw;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .project2 {
     background-color: cadetblue;
     height: 80vh;
+  }
+  .image {
+    position: relative;
+    width: 90vw;
+  }
+  .Overlay {
+    position: absolute;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .Overlay:hover {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
